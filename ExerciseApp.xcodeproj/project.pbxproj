@@ -10,6 +10,13 @@
 		314C8C7AA4D41AF579496DB9 /* Pods_ExerciseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B54F601E52649F4C85C6F1 /* Pods_ExerciseApp.framework */; };
 		8B26964325E5CED200DB1F64 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26964125E5CED200DB1F64 /* SigninVC.swift */; };
 		8B26964425E5CED200DB1F64 /* SignupAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26964225E5CED200DB1F64 /* SignupAlertVC.swift */; };
+		8B26965025E5E48D00DB1F64 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26964F25E5E48D00DB1F64 /* HomeVC.swift */; };
+		8B26965325E5E4DF00DB1F64 /* AddRepsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26965225E5E4DF00DB1F64 /* AddRepsVC.swift */; };
+		8B26965825E5EFA700DB1F64 /* ExerciseCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26965725E5EFA700DB1F64 /* ExerciseCVCell.swift */; };
+		8B26965C25E5F11700DB1F64 /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26965B25E5F11700DB1F64 /* DropShadowView.swift */; };
+		8B26965F25E699B700DB1F64 /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26965E25E699B700DB1F64 /* iOSDropDown.swift */; };
+		8B26966825E6CE6F00DB1F64 /* HorizontalPaginationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26966725E6CE6F00DB1F64 /* HorizontalPaginationManager.swift */; };
+		8B26966B25E6E2DE00DB1F64 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26966A25E6E2DE00DB1F64 /* SettingsVC.swift */; };
 		8B524F3F25E5A03B008E313C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524F3E25E5A03B008E313C /* AppDelegate.swift */; };
 		8B524F4125E5A03B008E313C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524F4025E5A03B008E313C /* SceneDelegate.swift */; };
 		8B524F4325E5A03B008E313C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524F4225E5A03B008E313C /* ViewController.swift */; };
@@ -46,6 +53,13 @@
 		899D5987FDF2FA9A92AF88BE /* Pods-ExerciseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExerciseApp.release.xcconfig"; path = "Target Support Files/Pods-ExerciseApp/Pods-ExerciseApp.release.xcconfig"; sourceTree = "<group>"; };
 		8B26964125E5CED200DB1F64 /* SigninVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		8B26964225E5CED200DB1F64 /* SignupAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupAlertVC.swift; sourceTree = "<group>"; };
+		8B26964F25E5E48D00DB1F64 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8B26965225E5E4DF00DB1F64 /* AddRepsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRepsVC.swift; sourceTree = "<group>"; };
+		8B26965725E5EFA700DB1F64 /* ExerciseCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCVCell.swift; sourceTree = "<group>"; };
+		8B26965B25E5F11700DB1F64 /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadowView.swift; sourceTree = "<group>"; };
+		8B26965E25E699B700DB1F64 /* iOSDropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSDropDown.swift; sourceTree = "<group>"; };
+		8B26966725E6CE6F00DB1F64 /* HorizontalPaginationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalPaginationManager.swift; sourceTree = "<group>"; };
+		8B26966A25E6E2DE00DB1F64 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		8B524F3B25E5A03B008E313C /* ExerciseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExerciseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B524F3E25E5A03B008E313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B524F4025E5A03B008E313C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +114,42 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		8B26964D25E5E45B00DB1F64 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8B26966A25E6E2DE00DB1F64 /* SettingsVC.swift */,
+				8B26964F25E5E48D00DB1F64 /* HomeVC.swift */,
+				8B26965225E5E4DF00DB1F64 /* AddRepsVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B26965525E5EF7B00DB1F64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B26965E25E699B700DB1F64 /* iOSDropDown.swift */,
+				8B26965B25E5F11700DB1F64 /* DropShadowView.swift */,
+				8B26965625E5EF8100DB1F64 /* CVCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B26965625E5EF8100DB1F64 /* CVCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B26965725E5EFA700DB1F64 /* ExerciseCVCell.swift */,
+			);
+			path = CVCell;
+			sourceTree = "<group>";
+		};
+		8B26966225E6CE5C00DB1F64 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8B26966725E6CE6F00DB1F64 /* HorizontalPaginationManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		8B524F3225E5A03B008E313C = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +171,8 @@
 		8B524F3D25E5A03B008E313C /* ExerciseApp */ = {
 			isa = PBXGroup;
 			children = (
+				8B26966225E6CE5C00DB1F64 /* Utils */,
+				8B26965525E5EF7B00DB1F64 /* View */,
 				8B52500525E5B1B9008E313C /* Extensions */,
 				8B524FFF25E5B18E008E313C /* API */,
 				8B524FED25E5B185008E313C /* Model */,
@@ -186,6 +238,7 @@
 		8B524FE625E5B124008E313C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8B26964D25E5E45B00DB1F64 /* Home */,
 				8B26964025E5CED200DB1F64 /* Auth */,
 				8B524FE725E5B14F008E313C /* Nav */,
 			);
@@ -373,15 +426,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B26965C25E5F11700DB1F64 /* DropShadowView.swift in Sources */,
 				8B52500B25E5B1B9008E313C /* Extension+UITableView.swift in Sources */,
 				8B52500C25E5B1B9008E313C /* Extension+UITextField.swift in Sources */,
 				8B26964325E5CED200DB1F64 /* SigninVC.swift in Sources */,
 				8B524FF925E5B185008E313C /* ProfileModel.swift in Sources */,
 				8B524FF625E5B185008E313C /* EquipmentModel.swift in Sources */,
 				8B52500D25E5B1B9008E313C /* extension+viewcontroller.swift in Sources */,
+				8B26966825E6CE6F00DB1F64 /* HorizontalPaginationManager.swift in Sources */,
+				8B26965325E5E4DF00DB1F64 /* AddRepsVC.swift in Sources */,
+				8B26965F25E699B700DB1F64 /* iOSDropDown.swift in Sources */,
 				8B524FFA25E5B185008E313C /* SetsModel.swift in Sources */,
+				8B26965825E5EFA700DB1F64 /* ExerciseCVCell.swift in Sources */,
 				8B524FF825E5B185008E313C /* NoteModel.swift in Sources */,
+				8B26966B25E6E2DE00DB1F64 /* SettingsVC.swift in Sources */,
 				8B524FFD25E5B185008E313C /* WorkoutModel.swift in Sources */,
+				8B26965025E5E48D00DB1F64 /* HomeVC.swift in Sources */,
 				8B524FFC25E5B185008E313C /* UserInfo.swift in Sources */,
 				8B524F4325E5A03B008E313C /* ViewController.swift in Sources */,
 				8B52500A25E5B1B9008E313C /* Constants.swift in Sources */,
