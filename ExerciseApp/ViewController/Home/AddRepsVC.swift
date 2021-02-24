@@ -187,6 +187,8 @@ class AddRepsVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func didTapSave(_ sender: Any) {
+    }
 }
 
 extension AddRepsVC: TTGTextTagCollectionViewDelegate {
