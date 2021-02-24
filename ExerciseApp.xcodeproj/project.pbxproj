@@ -8,18 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		314C8C7AA4D41AF579496DB9 /* Pods_ExerciseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B54F601E52649F4C85C6F1 /* Pods_ExerciseApp.framework */; };
+		8B26964325E5CED200DB1F64 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26964125E5CED200DB1F64 /* SigninVC.swift */; };
+		8B26964425E5CED200DB1F64 /* SignupAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26964225E5CED200DB1F64 /* SignupAlertVC.swift */; };
 		8B524F3F25E5A03B008E313C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524F3E25E5A03B008E313C /* AppDelegate.swift */; };
 		8B524F4125E5A03B008E313C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524F4025E5A03B008E313C /* SceneDelegate.swift */; };
 		8B524F4325E5A03B008E313C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524F4225E5A03B008E313C /* ViewController.swift */; };
 		8B524F4625E5A03B008E313C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F4425E5A03B008E313C /* Main.storyboard */; };
-		8B524F4825E5A04B008E313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F4725E5A04B008E313C /* Assets.xcassets */; };
 		8B524F4B25E5A04B008E313C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F4925E5A04B008E313C /* LaunchScreen.storyboard */; };
+		8B524F7E25E5A77C008E313C /* Mulish-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F7825E5A77B008E313C /* Mulish-Light.ttf */; };
+		8B524F7F25E5A77C008E313C /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F7925E5A77B008E313C /* Mulish-Medium.ttf */; };
+		8B524F8025E5A77C008E313C /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F7A25E5A77C008E313C /* Mulish-Regular.ttf */; };
+		8B524F8125E5A77C008E313C /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F7B25E5A77C008E313C /* Mulish-SemiBold.ttf */; };
+		8B524F8225E5A77C008E313C /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F7C25E5A77C008E313C /* Mulish-ExtraBold.ttf */; };
+		8B524F8325E5A77C008E313C /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F7D25E5A77C008E313C /* Mulish-Bold.ttf */; };
+		8B524F8A25E5AC20008E313C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B524F4725E5A04B008E313C /* Assets.xcassets */; };
+		8B524FEA25E5B16D008E313C /* MainNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FE825E5B16D008E313C /* MainNav.swift */; };
+		8B524FEB25E5B16D008E313C /* BaseNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FE925E5B16D008E313C /* BaseNavVC.swift */; };
+		8B524FF625E5B185008E313C /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FEE25E5B185008E313C /* EquipmentModel.swift */; };
+		8B524FF725E5B185008E313C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FEF25E5B185008E313C /* Exercise.swift */; };
+		8B524FF825E5B185008E313C /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FF025E5B185008E313C /* NoteModel.swift */; };
+		8B524FF925E5B185008E313C /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FF125E5B185008E313C /* ProfileModel.swift */; };
+		8B524FFA25E5B185008E313C /* SetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FF225E5B185008E313C /* SetsModel.swift */; };
+		8B524FFB25E5B185008E313C /* TrainerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FF325E5B185008E313C /* TrainerModel.swift */; };
+		8B524FFC25E5B185008E313C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FF425E5B185008E313C /* UserInfo.swift */; };
+		8B524FFD25E5B185008E313C /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B524FF525E5B185008E313C /* WorkoutModel.swift */; };
+		8B52500225E5B18E008E313C /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52500025E5B18E008E313C /* APIRouter.swift */; };
+		8B52500325E5B18E008E313C /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52500125E5B18E008E313C /* ApiService.swift */; };
+		8B52500A25E5B1B9008E313C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52500625E5B1B9008E313C /* Constants.swift */; };
+		8B52500B25E5B1B9008E313C /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52500725E5B1B9008E313C /* Extension+UITableView.swift */; };
+		8B52500C25E5B1B9008E313C /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52500825E5B1B9008E313C /* Extension+UITextField.swift */; };
+		8B52500D25E5B1B9008E313C /* extension+viewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52500925E5B1B9008E313C /* extension+viewcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47D26C86DC54BEB1AF68E75E /* Pods-ExerciseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExerciseApp.debug.xcconfig"; path = "Target Support Files/Pods-ExerciseApp/Pods-ExerciseApp.debug.xcconfig"; sourceTree = "<group>"; };
 		81B54F601E52649F4C85C6F1 /* Pods_ExerciseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExerciseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899D5987FDF2FA9A92AF88BE /* Pods-ExerciseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExerciseApp.release.xcconfig"; path = "Target Support Files/Pods-ExerciseApp/Pods-ExerciseApp.release.xcconfig"; sourceTree = "<group>"; };
+		8B26964125E5CED200DB1F64 /* SigninVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
+		8B26964225E5CED200DB1F64 /* SignupAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupAlertVC.swift; sourceTree = "<group>"; };
 		8B524F3B25E5A03B008E313C /* ExerciseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExerciseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B524F3E25E5A03B008E313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B524F4025E5A03B008E313C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +54,29 @@
 		8B524F4725E5A04B008E313C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B524F4A25E5A04B008E313C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B524F4C25E5A04B008E313C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B524F7825E5A77B008E313C /* Mulish-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Light.ttf"; sourceTree = "<group>"; };
+		8B524F7925E5A77B008E313C /* Mulish-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Medium.ttf"; sourceTree = "<group>"; };
+		8B524F7A25E5A77C008E313C /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		8B524F7B25E5A77C008E313C /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
+		8B524F7C25E5A77C008E313C /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8B524F7D25E5A77C008E313C /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
+		8B524F8525E5A79F008E313C /* ExerciseApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExerciseApp.entitlements; sourceTree = "<group>"; };
+		8B524FE825E5B16D008E313C /* MainNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNav.swift; sourceTree = "<group>"; };
+		8B524FE925E5B16D008E313C /* BaseNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavVC.swift; sourceTree = "<group>"; };
+		8B524FEE25E5B185008E313C /* EquipmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
+		8B524FEF25E5B185008E313C /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8B524FF025E5B185008E313C /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		8B524FF125E5B185008E313C /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		8B524FF225E5B185008E313C /* SetsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetsModel.swift; sourceTree = "<group>"; };
+		8B524FF325E5B185008E313C /* TrainerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerModel.swift; sourceTree = "<group>"; };
+		8B524FF425E5B185008E313C /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		8B524FF525E5B185008E313C /* WorkoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		8B52500025E5B18E008E313C /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		8B52500125E5B18E008E313C /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		8B52500625E5B1B9008E313C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8B52500725E5B1B9008E313C /* Extension+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
+		8B52500825E5B1B9008E313C /* Extension+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+		8B52500925E5B1B9008E313C /* extension+viewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "extension+viewcontroller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B26964025E5CED200DB1F64 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8B26964125E5CED200DB1F64 /* SigninVC.swift */,
+				8B26964225E5CED200DB1F64 /* SignupAlertVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		8B524F3225E5A03B008E313C = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +121,119 @@
 		8B524F3D25E5A03B008E313C /* ExerciseApp */ = {
 			isa = PBXGroup;
 			children = (
-				8B524F3E25E5A03B008E313C /* AppDelegate.swift */,
-				8B524F4025E5A03B008E313C /* SceneDelegate.swift */,
+				8B52500525E5B1B9008E313C /* Extensions */,
+				8B524FFF25E5B18E008E313C /* API */,
+				8B524FED25E5B185008E313C /* Model */,
+				8B524FE625E5B124008E313C /* ViewController */,
+				8B524F8625E5A9CE008E313C /* Apps */,
+				8B524F8525E5A79F008E313C /* ExerciseApp.entitlements */,
+				8B524F7325E5A6CF008E313C /* Resource */,
 				8B524F4225E5A03B008E313C /* ViewController.swift */,
-				8B524F4425E5A03B008E313C /* Main.storyboard */,
-				8B524F4725E5A04B008E313C /* Assets.xcassets */,
-				8B524F4925E5A04B008E313C /* LaunchScreen.storyboard */,
 				8B524F4C25E5A04B008E313C /* Info.plist */,
 			);
 			path = ExerciseApp;
+			sourceTree = "<group>";
+		};
+		8B524F7325E5A6CF008E313C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8B524F7725E5A6F8008E313C /* Storyboard */,
+				8B524F7625E5A6EF008E313C /* Images */,
+				8B524F7525E5A6E4008E313C /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8B524F7525E5A6E4008E313C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8B524F7D25E5A77C008E313C /* Mulish-Bold.ttf */,
+				8B524F7C25E5A77C008E313C /* Mulish-ExtraBold.ttf */,
+				8B524F7825E5A77B008E313C /* Mulish-Light.ttf */,
+				8B524F7925E5A77B008E313C /* Mulish-Medium.ttf */,
+				8B524F7A25E5A77C008E313C /* Mulish-Regular.ttf */,
+				8B524F7B25E5A77C008E313C /* Mulish-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8B524F7625E5A6EF008E313C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8B524F4725E5A04B008E313C /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8B524F7725E5A6F8008E313C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8B524F4425E5A03B008E313C /* Main.storyboard */,
+				8B524F4925E5A04B008E313C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8B524F8625E5A9CE008E313C /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				8B524F3E25E5A03B008E313C /* AppDelegate.swift */,
+				8B524F4025E5A03B008E313C /* SceneDelegate.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		8B524FE625E5B124008E313C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8B26964025E5CED200DB1F64 /* Auth */,
+				8B524FE725E5B14F008E313C /* Nav */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8B524FE725E5B14F008E313C /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				8B524FE925E5B16D008E313C /* BaseNavVC.swift */,
+				8B524FE825E5B16D008E313C /* MainNav.swift */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		8B524FED25E5B185008E313C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B524FEE25E5B185008E313C /* EquipmentModel.swift */,
+				8B524FEF25E5B185008E313C /* Exercise.swift */,
+				8B524FF025E5B185008E313C /* NoteModel.swift */,
+				8B524FF125E5B185008E313C /* ProfileModel.swift */,
+				8B524FF225E5B185008E313C /* SetsModel.swift */,
+				8B524FF325E5B185008E313C /* TrainerModel.swift */,
+				8B524FF425E5B185008E313C /* UserInfo.swift */,
+				8B524FF525E5B185008E313C /* WorkoutModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B524FFF25E5B18E008E313C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8B52500025E5B18E008E313C /* APIRouter.swift */,
+				8B52500125E5B18E008E313C /* ApiService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8B52500525E5B1B9008E313C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B52500625E5B1B9008E313C /* Constants.swift */,
+				8B52500725E5B1B9008E313C /* Extension+UITableView.swift */,
+				8B52500825E5B1B9008E313C /* Extension+UITextField.swift */,
+				8B52500925E5B1B9008E313C /* extension+viewcontroller.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E4D0A8C1A196E7DC1B316E2C /* Pods */ = {
@@ -150,9 +312,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B524F8325E5A77C008E313C /* Mulish-Bold.ttf in Resources */,
 				8B524F4B25E5A04B008E313C /* LaunchScreen.storyboard in Resources */,
-				8B524F4825E5A04B008E313C /* Assets.xcassets in Resources */,
+				8B524F7F25E5A77C008E313C /* Mulish-Medium.ttf in Resources */,
+				8B524F8125E5A77C008E313C /* Mulish-SemiBold.ttf in Resources */,
+				8B524F8225E5A77C008E313C /* Mulish-ExtraBold.ttf in Resources */,
+				8B524F8025E5A77C008E313C /* Mulish-Regular.ttf in Resources */,
 				8B524F4625E5A03B008E313C /* Main.storyboard in Resources */,
+				8B524F8A25E5AC20008E313C /* Assets.xcassets in Resources */,
+				8B524F7E25E5A77C008E313C /* Mulish-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,8 +373,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B52500B25E5B1B9008E313C /* Extension+UITableView.swift in Sources */,
+				8B52500C25E5B1B9008E313C /* Extension+UITextField.swift in Sources */,
+				8B26964325E5CED200DB1F64 /* SigninVC.swift in Sources */,
+				8B524FF925E5B185008E313C /* ProfileModel.swift in Sources */,
+				8B524FF625E5B185008E313C /* EquipmentModel.swift in Sources */,
+				8B52500D25E5B1B9008E313C /* extension+viewcontroller.swift in Sources */,
+				8B524FFA25E5B185008E313C /* SetsModel.swift in Sources */,
+				8B524FF825E5B185008E313C /* NoteModel.swift in Sources */,
+				8B524FFD25E5B185008E313C /* WorkoutModel.swift in Sources */,
+				8B524FFC25E5B185008E313C /* UserInfo.swift in Sources */,
 				8B524F4325E5A03B008E313C /* ViewController.swift in Sources */,
+				8B52500A25E5B1B9008E313C /* Constants.swift in Sources */,
+				8B52500225E5B18E008E313C /* APIRouter.swift in Sources */,
 				8B524F3F25E5A03B008E313C /* AppDelegate.swift in Sources */,
+				8B524FEA25E5B16D008E313C /* MainNav.swift in Sources */,
+				8B26964425E5CED200DB1F64 /* SignupAlertVC.swift in Sources */,
+				8B524FFB25E5B185008E313C /* TrainerModel.swift in Sources */,
+				8B52500325E5B18E008E313C /* ApiService.swift in Sources */,
+				8B524FEB25E5B16D008E313C /* BaseNavVC.swift in Sources */,
+				8B524FF725E5B185008E313C /* Exercise.swift in Sources */,
 				8B524F4125E5A03B008E313C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExerciseApp/ExerciseApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K65WY5EHC;
 				INFOPLIST_FILE = ExerciseApp/Info.plist;
@@ -375,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExerciseApp/ExerciseApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K65WY5EHC;
 				INFOPLIST_FILE = ExerciseApp/Info.plist;
