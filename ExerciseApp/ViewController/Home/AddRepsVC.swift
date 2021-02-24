@@ -7,6 +7,7 @@
 
 import UIKit
 import TTGTagCollectionView
+import CRNotifications
 
 public func delay(_ delay: Double, closure: @escaping () -> Void) {
     let deadline = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
@@ -66,7 +67,7 @@ class AddRepsVC: UIViewController {
     var itemCount = 0
     var exercises = [Exercise]()
     var filteredExercises = [Exercise]()
-    var selectedExercises = [Exercise]()
+    var selectedExercise: Exercise?
     var units = ["kg","lb"]
     var selectedUnit = 0
     
@@ -183,11 +184,159 @@ class AddRepsVC: UIViewController {
         }
     }
     
+    private func createWorkout(){
+
+        self.showHUD()
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let dateTime = dateFormatter.string(from: Date())
+
+        var titles = [String]()
+        var ids = [String]()
+        if !selectedExercise!.category.isEmpty {
+            titles.append(selectedExercise!.category)
+        }
+        ids.append(selectedExercise!.id)
+
+        var title = ""
+        if titles.count > 0 {
+            title = titles.joined(separator: "/")
+        }
+
+        let params = [
+            "datetime": dateTime,
+            "title": title,
+            "body_weight": 0,
+            "energy_level": 0,
+            "comments": "",
+            "exercises":ids] as [String : Any]
+
+        ApiService.createWorkout(params: params) { [self] (success, data) in
+            if success {
+
+                if let id = data!["id"] as? String {
+                    addReps(id,isNew: true)
+                }
+
+//                if let id = data!["id"] as? String {
+//                    let vc = self.storyboard?.instantiateViewController(identifier: "WorkoutDetailVC") as! WorkoutDetailVC
+//                    vc.workoutID = id
+//                    vc.isFromCreate = true
+//                    self.navigationController?.pushViewController(vc, animated: true)
+//                }
+            }else{
+                self.dismissHUD()
+                self.showFailureAlert()
+            }
+        }
+    }
+    
+    private func addReps(_ workoutId: String, isNew: Bool){
+        let params = [
+            "num": 1,
+            "reps": Int(self.repsField.text!) as Any,
+            "workout": workoutId,
+            "exercise": selectedExercise!.id] as [String : Any]
+        ApiService.workoutSets(workoutId: workoutId, params: params) { (success, data) in
+            self.dismissHUD()
+            
+            if success {
+                
+                for item in self.filteredExercises {
+                    item.isSelected = false
+                }
+                self.selectedExercise = nil
+                self.collectionView.reloadData()
+
+                let nc = NotificationCenter.default
+                
+                if isNew {
+                    nc.post(name: Notification.Name("WorkoutCreated"), object: nil)
+                    CRNotifications.showNotification(textColor: MAIN_COLOR!, backgroundColor: BACKGROUND_COLOR!, image: UIImage(named: "success"), title: "Success!", message: "You successfully created Workout.", dismissDelay: 2.0)
+                }else{
+                    nc.post(name: Notification.Name("addToWorkoutNotification"), object: nil)
+                    nc.post(name: Notification.Name("workoutUpdated"), object: nil)
+                    self.back()
+                }
+            }
+        }
+    }
+    
+    private func updateWorkout(_ workout: WorkoutModel){
+        
+        self.showHUD()
+        
+        var ids = [String]()
+        for item in workout.exercises {
+            ids.append(item.id)
+        }
+        ids.append(selectedExercise!.id)
+
+        var orders = ""
+        if !workout.order.isEmpty {
+            orders = ids.joined(separator: ",")
+            workout.order.append(contentsOf: ",\(orders)")
+        }
+        
+        let params = [
+            "datetime": workout.datetime,
+            "title": workout.title,
+            "body_weight": weightField.text!.isEmpty ? 0 : Int(weightField.text!) as Any,
+            "energy_level": workout.energy_level,
+            "comments": workout.comments,
+            "order": orders,
+            "exercises":ids] as [String : Any]
+        
+        ApiService.updateWorkout(id: workout.id,params: params) { [self] (success, data) in
+            self.dismissHUD()
+            if success {
+                
+                if let id = data!["id"] as? String {
+                    addReps(id, isNew: false)
+                }
+                
+//                for item in self.filteredExercises {
+//                    item.isSelected = false
+//                }
+//                self.seletedCount = 0
+//                self.checkedExercises.removeAll()
+//                self.collectionView.reloadData()
+//
+//                let nc = NotificationCenter.default
+//                nc.post(name: Notification.Name("addToWorkoutNotification"), object: nil)
+//                nc.post(name: Notification.Name("workoutUpdated"), object: nil)
+//                self.back()
+            }else{
+                self.showFailureAlert()
+            }
+        }
+    }
+    
     @IBAction func didTapBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func didTapSave(_ sender: Any) {
+        
+        if self.selectedExercise == nil {
+            let alert = UIAlertController(title: "Warning", message: "Please select exercise.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: { (action) in
+                
+            }))
+            self.present(alert, animated: true)
+            return
+        }
+        self.showHUD()
+        let params = [
+            "order_by": ""] as [String : Any]
+        ApiService.hasTodayWorkout(params: params) { (hasWorkout, workout) in
+            if !hasWorkout {
+                self.createWorkout()
+            }else{
+                self.updateWorkout(workout!)
+            }
+        }
     }
 }
 
@@ -221,6 +370,16 @@ extension AddRepsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExerciseCVCell", for: indexPath) as! ExerciseCVCell
+        
+        if selectedExercise == nil {
+            self.filteredExercises[indexPath.item].isSelected = false
+        }else{
+            if filteredExercises[indexPath.item].id == selectedExercise!.id {
+                self.filteredExercises[indexPath.item].isSelected = true
+            }else{
+                self.filteredExercises[indexPath.item].isSelected = false
+            }
+        }
         cell.initCell(self.filteredExercises[indexPath.item])
         return cell
     }
@@ -231,11 +390,17 @@ extension AddRepsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.filteredExercises.forEach { (exercise) in
-            exercise.isSelected = false
-        }
         
-        self.filteredExercises[indexPath.item].isSelected = true
+        if filteredExercises[indexPath.item].isSelected {
+            self.selectedExercise = nil
+            filteredExercises[indexPath.item].isSelected = false
+        }else{
+            self.filteredExercises.forEach { (exercise) in
+                exercise.isSelected = false
+            }
+            self.filteredExercises[indexPath.item].isSelected = true
+            self.selectedExercise = self.filteredExercises[indexPath.item]
+        }
         
         self.collectionView.reloadData()
      

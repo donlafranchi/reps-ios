@@ -118,6 +118,46 @@ class ApiService: NSObject {
           }
      }
     
+    class func hasTodayWorkout(params: [String: Any], completion: @escaping (_ success: Bool, _ workout: WorkoutModel?) -> Void) {
+     
+          let url = baseURLPath + "api/workouts/"
+         
+          AF.request(url, method: .get, parameters: params)
+           .responseJSON { response in
+              switch response.result {
+              case .success(let data):
+                  let jsonData = JSON(data).dictionaryObject
+                  if response.response!.statusCode >= 200 && response.response!.statusCode < 300 {
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                    var isTodayExsit = false
+                    var _workout: WorkoutModel? = nil
+                    if let results = jsonData!["results"] as? [[String:Any]] {
+                        
+                        for item in results {
+                            let workout = WorkoutModel(item)
+                            let date = dateFormatter.date(from: workout.datetime)!
+                            if  Calendar.current.isDateInToday(date) {
+                                isTodayExsit = true
+                                _workout = workout
+                                break
+                            }
+                        }
+                        completion(isTodayExsit,_workout)
+                        
+                    }else{
+                        completion(false,_workout)
+                    }
+                  }else{
+                     completion(false,nil)
+                  }
+              case .failure( _):
+                 completion(false,nil)
+              }
+          }
+     }
+    
     class func createWorkout(params: [String: Any], completion: @escaping (_ success: Bool, _ data: [String: Any]?) -> Void) {
       
            let url = baseURLPath + "api/workouts/"
