@@ -34,4 +34,5 @@ target 'ExerciseApp' do
     pod 'TableViewDragger'
     pod 'AYPopupPickerView'
     pod 'MaterialTextField'
+    pod 'LoadingPlaceholderView'
 end

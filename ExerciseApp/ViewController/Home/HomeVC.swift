@@ -17,7 +17,10 @@ class HomeVC: UIViewController {
 
     @IBAction func didTapAddReps(_ sender: Any) {
         
-        let vc = self.storyboard?.instantiateViewController(identifier: "AddRepsVC") as! AddRepsVC
+//        let vc = self.storyboard?.instantiateViewController(identifier: "AddRepsVC") as! AddRepsVC
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(identifier: "ExerciseHistoryVC") as! ExerciseHistoryVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

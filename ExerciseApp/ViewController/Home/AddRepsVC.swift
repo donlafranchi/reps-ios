@@ -50,7 +50,6 @@ class AddRepsVC: UIViewController {
     private var isDragging: Bool {
         return self.collectionView.isDragging
     }
-    
     var categories: [String] = ["Push","Pull","Legs","Core"]
     var height: CGFloat = 0
     var selectedCategory = ""{
@@ -127,6 +126,7 @@ class AddRepsVC: UIViewController {
     }
 
     func getAllExercises(completion: @escaping (Bool?) -> Void){
+        
         let params = [
             "order_by": "-created",
             "active": true,
@@ -207,7 +207,7 @@ class AddRepsVC: UIViewController {
         let params = [
             "datetime": dateTime,
             "title": title,
-            "body_weight": 0,
+            "body_weight": weightField.text!.isEmpty ? 0 : Int(weightField.text!) as Any,
             "energy_level": 0,
             "comments": "",
             "exercises":ids] as [String : Any]
@@ -235,7 +235,7 @@ class AddRepsVC: UIViewController {
     private func addReps(_ workoutId: String, isNew: Bool){
         let params = [
             "num": 1,
-            "reps": Int(self.repsField.text!) as Any,
+            "reps": repsField.text!.isEmpty ? 0 : Int(repsField.text!) as Any,
             "workout": workoutId,
             "exercise": selectedExercise!.id] as [String : Any]
         ApiService.workoutSets(workoutId: workoutId, params: params) { (success, data) in
@@ -257,8 +257,10 @@ class AddRepsVC: UIViewController {
                 }else{
                     nc.post(name: Notification.Name("addToWorkoutNotification"), object: nil)
                     nc.post(name: Notification.Name("workoutUpdated"), object: nil)
-                    self.back()
                 }
+                
+                let vc = self.storyboard?.instantiateViewController(identifier: "ExerciseHistoryVC") as! ExerciseHistoryVC
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

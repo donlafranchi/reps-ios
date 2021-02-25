@@ -18,6 +18,9 @@
                             <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_splash" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vmm-bj-IJv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8ni-sZ-dgi">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -26,6 +29,8 @@
                             <constraint firstItem="Vmm-bj-IJv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BBs-69-kyn"/>
                             <constraint firstAttribute="bottom" secondItem="Vmm-bj-IJv" secondAttribute="bottom" id="Nld-Dc-vf6"/>
                             <constraint firstItem="Vmm-bj-IJv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="O4n-iz-9nw"/>
+                            <constraint firstItem="8ni-sZ-dgi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fUG-FA-xe8"/>
+                            <constraint firstItem="8ni-sZ-dgi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tqn-ql-iqR"/>
                         </constraints>
                     </view>
                 </viewController>
