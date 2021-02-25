@@ -9,7 +9,7 @@ import UIKit
 
 class HistoryModel: NSObject {
     var name = ""
-    var bodyWeight: Float = 0
+    var bodyWeight: Int = 0
     var reps: Int = 0
     var date: Date = Date()
 
@@ -19,7 +19,7 @@ class HistoryModel: NSObject {
     
     init(_ json: [String: Any]) {
         name = json["name"] as? String ?? ""
-        bodyWeight = json["bodyWeight"] as? Float ?? 0
+        bodyWeight = json["bodyWeight"] as? Int ?? 0
         reps = json["reps"] as? Int ?? 0
         date = json["date"] as? Date ?? Date()
 

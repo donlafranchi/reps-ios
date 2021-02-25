@@ -108,6 +108,11 @@ class ExerciseHistoryVC: UIViewController {
             self.loadingPlaceholderView.uncover()
         }
     }
+    
+    @IBAction func didTapBack(_ sender: Any) {
+        self.back()
+    }
+    
 }
 
 extension ExerciseHistoryVC: UITableViewDataSource, UITableViewDelegate {

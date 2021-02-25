@@ -17,14 +17,16 @@ class HomeVC: UIViewController {
 
     @IBAction func didTapAddReps(_ sender: Any) {
         
-//        let vc = self.storyboard?.instantiateViewController(identifier: "AddRepsVC") as! AddRepsVC
-//        self.navigationController?.pushViewController(vc, animated: true)
-        
-        let vc = self.storyboard?.instantiateViewController(identifier: "ExerciseHistoryVC") as! ExerciseHistoryVC
+        let vc = self.storyboard?.instantiateViewController(identifier: "AddRepsVC") as! AddRepsVC
         self.navigationController?.pushViewController(vc, animated: true)
+        
+
     }
     
     @IBAction func didTapSettings(_ sender: Any) {
         self.performSegue(withIdentifier: "goSettings", sender: nil)
+        
+//        let vc = self.storyboard?.instantiateViewController(identifier: "ExerciseHistoryVC") as! ExerciseHistoryVC
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

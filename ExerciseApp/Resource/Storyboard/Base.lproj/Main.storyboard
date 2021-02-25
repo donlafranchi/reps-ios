@@ -325,13 +325,21 @@
                                     <action selector="didTapAddReps:" destination="Mgk-Ne-ETP" eventType="touchUpInside" id="Jmk-Cq-dpO"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do More Reps!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy7-mS-2e0">
+                                <rect key="frame" x="140" y="396.5" width="134.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="20"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U9c-ZK-TsY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="U9c-ZK-TsY" firstAttribute="bottom" secondItem="m46-Ag-kHo" secondAttribute="bottom" constant="16" id="3oK-ss-tQl"/>
                             <constraint firstItem="U9c-ZK-TsY" firstAttribute="trailing" secondItem="m46-Ag-kHo" secondAttribute="trailing" constant="20" id="9zc-zy-Ysu"/>
+                            <constraint firstItem="Xy7-mS-2e0" firstAttribute="centerX" secondItem="Enl-3z-Hz1" secondAttribute="centerX" id="BDj-h3-p20"/>
                             <constraint firstItem="m46-Ag-kHo" firstAttribute="leading" secondItem="U9c-ZK-TsY" secondAttribute="leading" constant="20" id="e1j-ux-D7T"/>
+                            <constraint firstItem="Xy7-mS-2e0" firstAttribute="centerY" secondItem="Enl-3z-Hz1" secondAttribute="centerY" constant="-40" id="jFL-5w-pwr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Rwf-DN-IN5">
@@ -1335,6 +1343,9 @@
                     <navigationItem key="navigationItem" title="Exercise History" id="Zhc-aK-fBu">
                         <barButtonItem key="leftBarButtonItem" image="ic_back" id="3zr-8g-eyq">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapBack:" destination="cV3-C9-YoP" id="vRJ-gl-iOV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

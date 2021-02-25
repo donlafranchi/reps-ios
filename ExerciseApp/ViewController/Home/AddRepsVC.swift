@@ -77,7 +77,6 @@ class AddRepsVC: UIViewController {
         initUnitDropDown()
         setupPagination()
         fetchItems()
-        getAllExercises(completion: {_ in })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,7 +127,7 @@ class AddRepsVC: UIViewController {
     func getAllExercises(completion: @escaping (Bool?) -> Void){
         
         let params = [
-            "order_by": "-created",
+            "order_by": "name",
             "active": true,
             "category": selectedCategory,
             "q": query] as [String : Any]
@@ -151,12 +150,7 @@ class AddRepsVC: UIViewController {
                 }
                 
                 if let results = data!["results"] as? [[String:Any]] {
-                   
-//                    if results.count == 0 {
-//                        self.collectionView.cr.noticeNoMoreData()
-//                    }else{
-//                        self.collectionView.cr.resetNoMore()
-//                    }
+
                     
                     for item in results {
                         self.exercises.append(Exercise(item))
@@ -164,22 +158,13 @@ class AddRepsVC: UIViewController {
                     }
                     
                     self.collectionView.reloadData()
-//                    self.collectionView.cr.endHeaderRefresh()
-//                    self.collectionView.cr.endLoadingMore()
                     
-                }else{
-//                    self.collectionView.cr.endHeaderRefresh()
-//                    self.collectionView.cr.endLoadingMore()
-//                    self.collectionView.cr.noticeNoMoreData()
                 }
             }else{
                 self.pageNum = 1
                 self.exercises.removeAll()
                 self.filteredExercises.removeAll()
                 self.showFailureAlert()
-//                self.collectionView.cr.endHeaderRefresh()
-//                self.collectionView.cr.endLoadingMore()
-//                self.collectionView.cr.noticeNoMoreData()
             }
         }
     }
@@ -234,7 +219,7 @@ class AddRepsVC: UIViewController {
     
     private func addReps(_ workoutId: String, isNew: Bool){
         let params = [
-            "num": 1,
+            "num": weightField.text!.isEmpty ? 0 : Int(weightField.text!) as Any,
             "reps": repsField.text!.isEmpty ? 0 : Int(repsField.text!) as Any,
             "workout": workoutId,
             "exercise": selectedExercise!.id] as [String : Any]

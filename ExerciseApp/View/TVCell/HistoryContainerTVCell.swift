@@ -38,7 +38,7 @@ class HistoryContainerTVCell: UITableViewCell {
             exercise.sets.forEach { (set) in
                 let history = HistoryModel()
                 history.name = exercise.name
-                history.bodyWeight = Float(self.workout!.body_weight)
+                history.bodyWeight = set.num
                 history.reps = set.reps
                 history.date = set.modified!
                 self.histories.append(history)
